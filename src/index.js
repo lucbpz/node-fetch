@@ -51,8 +51,8 @@ export default function fetch(url, opts) {
 		let response = null;
 
 		const abort = ()  => {
-			let error = new AbortError('The user aborted a request.');
-			reject(error);
+			// let error = new AbortError('The user aborted a request.');
+			// reject(error);
 			if (request.body && request.body instanceof Stream.Readable) {
 				request.body.destroy(error);
 			}
